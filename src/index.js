@@ -1,30 +1,36 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-//create a simple react element
-// const createApp = (props) => {
-//     return (<div>
-//         {/*if you want to insert js code to jsx,you should add {}*/}
-//         <h1>Welcome {props.title}!!!</h1>
-//         <p>React is A JavaScript library for building user interfaces</p>
-//         <p>great {props.title}</p>
-//     </div>);
-// }
-// const app = createApp({
-//     title:'React 16.8'
-// });
+import React,{Component} from 'react'
+import {render} from 'react-dom'
+
+//2nd way to define a component: use class, inherit React.Component
+class App extends Component{
+    render() {
+        //console.log(this.props.title);
+        return(
+            <div>
+                <h1>class component</h1>
+                <p>{this.props.title}</p>
+            </div>
+
+        )
+            ;
+    };
+
+}
+//the theory of class component
+// const app = new App({
+//     title:"class component extends React.Component"
+// }).render();
 
 
-//the 1st way to create a component: use arrow function. the name starts with capital
-const App = (props) => {
-    return (<div>
-        {/*if you want to insert js code to jsx,you should add {}*/}
-        <h1 title={props.title}>Welcome {props.title}!!!</h1>
-        <p>React is A JavaScript library for building user interfaces</p>
-        <p>great {props.title}</p>
-    </div>);
-};
-
-ReactDOM.render(
-    <App title='1901'/>,
+//render is provided by ReactDOM, just used once
+render(
+    <App title={"class component extends React.Component"} x="abc"/>,
     document.querySelector('#root')
 );
+
+//before react 16, use this way to create
+// React.createClass({
+//     render(){
+//         return <h1>xxx</h1>
+//     }
+// })
