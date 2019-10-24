@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d7c5220-0d3e-4746-a4c6-7a1b4b6ae73e" name="Default Changelist" comment="lesson 3, use class to create react component">
+    <list default="true" id="0d7c5220-0d3e-4746-a4c6-7a1b4b6ae73e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
@@ -29,6 +29,10 @@
   <component name="ProjectId" id="1ScbTfIg0z3OHuM2PlSmpwrtDFg" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
   </component>
   <component name="RunDashboard">
@@ -54,6 +58,7 @@
       <option name="presentableId" value="Default" />
       <updated>1571865839501</updated>
       <workItem from="1571865840951" duration="284000" />
+      <workItem from="1571900834470" duration="734000" />
     </task>
     <task id="LOCAL-00001" summary="original">
       <created>1571866074756</created>
@@ -62,7 +67,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571866074756</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="lesson 3, use class to create react component">
+      <created>1571899645498</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571899645498</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -73,7 +85,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
