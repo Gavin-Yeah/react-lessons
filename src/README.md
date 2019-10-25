@@ -32,3 +32,16 @@
 ```
 
 ####   when pass attributes to the item,we can use   {...todo}
+
+
+### use destruction to make variable shorter like
+
+```
+ const{
+            isCompleted,
+            title
+        } = this.props;
+
+```
+
+### use noop (empty function) to avoid null function (if that function is not defined)

@@ -8,6 +8,7 @@ import  {
 } from './components'
 
 
+
 class App extends Component {
     // state ={
     //     title:'TodoList'
@@ -55,6 +56,22 @@ addTodo = (todoTitle) =>{
         todos:newTodos
     })
 }
+
+
+onCompletedChange = (id)=>{
+        console.log('onCompletedChanged', id)
+    this.setState((prevState)=>{
+        return {
+            todos:prevState.todos.map(todo=>{
+                if(todo.id===id){
+                    todo.isCompleted = !todo.isCompleted;
+                }
+                return todo;
+            })
+        }
+    })
+
+}
     render() {
         return (
             <>
@@ -78,7 +95,9 @@ addTodo = (todoTitle) =>{
                          <TodoInput
                          addTodo = {this.addTodo}/>
 
-                <TodoList todos={this.state.todos}/>
+                <TodoList todos={this.state.todos}
+                          onCompletedChange={ this.onCompletedChange}
+                />
 
                 <Like/>
 

@@ -1,11 +1,35 @@
 import React, {Component} from 'react';
-
+//define an empty func
+const noop = ()=>{}
 class TodoItem extends Component {
+
+    handleCheckboxChange = ()=>{
+      // this.props.onCompletedChange && this.props.onCompletedChange(this.props.id);
+
+        //simpler way
+        const {
+            onCompletedChange= noop,
+            id
+        } = this.props;
+        onCompletedChange(id);
+
+
+
+    }
+
     render() {
-        console.log(this.props)
+        const{
+            isCompleted,
+            title
+        } = this.props;
+
         return (
             <li>
-                {this.props.title} {this.props.isCompleted?'finished':'unfinished'}
+                <input type="checkbox"
+                checked={isCompleted}
+                       onChange={this.handleCheckboxChange}
+                />
+                <span>{title} {isCompleted?'finished':'unfinished'}</span>
             </li>
         );
     }
