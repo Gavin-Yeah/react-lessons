@@ -3,7 +3,8 @@ import React, {Component} from 'react';  //use Fragment to create an empty tag o
 import  {
     TodoHeader,
     TodoInput,
-    TodoList
+    TodoList,
+    Like
 } from './components'
 
 
@@ -32,6 +33,28 @@ class App extends Component {
                 }]
         }
 }
+
+addTodo = (todoTitle) =>{
+        // console.log(todoTitle);
+        // this.setState({
+        //     //3 is not an array,the return value of push() is the length
+        //     todos: this.state.todos.concat({
+        //         id:Math.random(),
+        //         title: todoTitle,
+        //         isCompleted:false
+        //     })
+        // })
+
+    const newTodos = this.state.todos.slice();
+    newTodos.push({
+        id: Math.random(),
+        title: todoTitle,
+        isCompleted: false
+    })
+    this.setState({
+        todos:newTodos
+    })
+}
     render() {
         return (
             <>
@@ -50,13 +73,14 @@ class App extends Component {
 
                         <TodoHeader x={1} y={2}>
                             <i>backlog</i>
-                            {this.state.title}
+
                         </TodoHeader>
-                         <TodoInput />
+                         <TodoInput
+                         addTodo = {this.addTodo}/>
 
                 <TodoList todos={this.state.todos}/>
 
-
+                <Like/>
 
 
             </>
