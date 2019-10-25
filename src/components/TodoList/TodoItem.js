@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
 
-function TodoItem() {
-
+class TodoItem extends Component {
+    render() {
+        console.log(this.props)
         return (
-            <div>
-                TodoItem
-            </div>
+            <li>
+                {this.props.title} {this.props.isCompleted?'finished':'unfinished'}
+            </li>
         );
-
+    }
 }
 
 export default TodoItem;

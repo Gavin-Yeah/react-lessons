@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d7c5220-0d3e-4746-a4c6-7a1b4b6ae73e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TodoHeader/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TodoInput/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TodoList/TodoItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TodoList/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoHeader/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoHeader/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoInput/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoInput/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoList/TodoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoList/TodoItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoList/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571903939222</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="lesson 5 function/component import, modulation">
+      <created>1571950935489</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1571950935489</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +127,7 @@
     <MESSAGE value="lesson 1" />
     <MESSAGE value="lesson 3, use class to create react component" />
     <MESSAGE value="lesson 4 style insert" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson 4 style insert" />
+    <MESSAGE value="lesson 5 function/component import, modulation" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson 5 function/component import, modulation" />
   </component>
 </project>
