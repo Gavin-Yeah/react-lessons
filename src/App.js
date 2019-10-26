@@ -7,7 +7,7 @@ import  {
     Like
 } from './components'
 
-
+import {getTodos} from './services'
 
 class App extends Component {
     // state ={
@@ -21,21 +21,40 @@ class App extends Component {
 
             article:'<div>gsdfgdfsgsgs<i>gfgsgvtsbs</i></div>',
             todos:[
-                {
-                    id:1,
-                    title:'eat',
-                    assignee:'Leo',
-                    isCompleted:true
-                },{
-                id: 2,
-                    title: 'sleep',
-                    assignee:'nick',
-                    isCompleted: false
-                }]
+            ]
+            ,isLoading: false
         }
 }
+getData = ()=>{
+        this.setState({
+            isLoading:true
+        })
+    getTodos().then(resp =>{
+        console.log(resp)
+        if (resp.status === 200){
+            this.setState(
+                {todos:resp.data}
+            )
 
-addTodo = (todoTitle) =>{
+        }else{
+            //process error
+
+        }
+    })
+        .catch(err=>{
+            console.log(err)
+        }).finally(()=>{
+        this.setState({
+            isLoading:false
+        })
+    })
+}
+componentDidMount() {
+  this.getData()
+}
+
+
+    addTodo = (todoTitle) =>{
         // console.log(todoTitle);
         // this.setState({
         //     //3 is not an array,the return value of push() is the length
@@ -50,7 +69,7 @@ addTodo = (todoTitle) =>{
     newTodos.push({
         id: Math.random(),
         title: todoTitle,
-        isCompleted: false
+        completed: false
     })
     this.setState({
         todos:newTodos
@@ -64,7 +83,7 @@ onCompletedChange = (id)=>{
         return {
             todos:prevState.todos.map(todo=>{
                 if(todo.id===id){
-                    todo.isCompleted = !todo.isCompleted;
+                    todo.completed = !todo.completed;
                 }
                 return todo;
             })
@@ -94,10 +113,14 @@ onCompletedChange = (id)=>{
                         </TodoHeader>
                          <TodoInput
                          addTodo = {this.addTodo}/>
+                {
+                    this.state.isLoading?
+                        <div>loading...</div>:
+                        (<TodoList todos={this.state.todos}
+                                   onCompletedChange={ this.onCompletedChange}
+                    />)
+                }
 
-                <TodoList todos={this.state.todos}
-                          onCompletedChange={ this.onCompletedChange}
-                />
 
                 <Like/>
 

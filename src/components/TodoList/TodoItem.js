@@ -26,7 +26,7 @@ class TodoItem extends PureComponent {
     }
     static getDerivedStateFromProps(props){
             return ({
-                        completedText: props.isCompleted?'finished':'unfinished'
+                        completedText: props.completed?'finished':'unfinished'
                     })
 }
 
@@ -65,14 +65,14 @@ class TodoItem extends PureComponent {
     render() {
         console.log(`todoItem ${this.props.title} render`)
         const{
-            isCompleted,
+            completed,
             title
         } = this.props;
 
         return (
             <li>
                 <input type="checkbox"
-                checked={isCompleted}
+                checked={completed}
                        onChange={this.handleCheckboxChange}
                 />
                 <span>{title} {this.state.completedText}</span>
