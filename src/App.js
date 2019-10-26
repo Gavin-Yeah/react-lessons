@@ -59,7 +59,7 @@ addTodo = (todoTitle) =>{
 
 
 onCompletedChange = (id)=>{
-        console.log('onCompletedChanged', id)
+
     this.setState((prevState)=>{
         return {
             todos:prevState.todos.map(todo=>{

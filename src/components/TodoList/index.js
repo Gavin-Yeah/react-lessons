@@ -13,7 +13,7 @@ class TodoList extends Component {
 
 
     render() {
-        console.log(this.props)
+
         return (
            <ul>
                {

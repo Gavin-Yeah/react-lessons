@@ -1,47 +1,18 @@
-##  use prop-types
-*   npm install --save prop-types
-```
-    import PropTypes from 'prop-types'
-    
-    
-    
-    TodoHeader.propTypes = {
-    title: PropTypes.string,
-    x: PropTypes.number,
-    y: PropTypes.number
-}
-```
-*   in function , we should include the function name
-*   in class, we could add static propTypes in that class 
-```
-    static propTypes = {
-        btnText:PropTypes.string
-    }
-```
+#### life cycle
+1. constructor()
+2. static getDerivedStateFromProps()
+3.  render()
+4.  componentDidMount()
+#### props or state changes will triggers updates
+1.  static getDerivedStateFromProps()
+2.  shouldComponentUpdate()
+3.  render()
+4.  getSnapshotBeforeUpdate()
+5.  componentDidUpdate()
 
-#### add default into static defaultProps
-```
-    static defaultProps = {
-        btnText: 'add todo'
-    }
-```
-
-#### add innerhtml into the state
-```
- <div dangerouslySetInnerHTML={{__html:this.state.article}}/>
-```
-
-####   when pass attributes to the item,we can use   {...todo}
+componentWillUnmount()
 
 
-### use destruction to make variable shorter like
 
-```
- const{
-            isCompleted,
-            title
-        } = this.props;
 
-```
-
-### use noop (empty function) to avoid null function (if that function is not defined)
+###add shouldComponentUpdate or change Component to PureComponent to avoid multi render
