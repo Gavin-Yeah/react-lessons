@@ -1,12 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+//need to import useState useEffect
+import React, {useState, useEffect} from 'react'
+import {render} from 'react-dom'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+//react hooks makes function have own state
+const Counter = ()=>{
+    //useState is a function, parameter is the initial state. this function returns an array [state,setState]
+    const [count,setCount] = useState(0);
+    //useEffect is a callback function. when update ot load, it will be called, like the combination of componentMount and componentUpdate
+    useEffect(()=>{
+        console.log('update')
+        document.title = `当前的数量为${count}`;
+    })
+    return(
+        <div>
+            <p>当前的数量为{count}</p>
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+            <button onClick={()=>{setCount(count-1)}}>-</button>
+
+            <span>{count}</span>
+
+            <button onClick={()=>{setCount(count+1)}}>+</button>
+        </div>
+    )
+}
+
+render(
+    <Counter/>,
+    document.querySelector('#root')
+)
