@@ -1,18 +1,16 @@
-import React, {Component} from 'react';
-import {
-    CounterBtn, Counter
-} from "./components";
+import React, {Component} from 'react'
 
-class App extends Component {
+import  withCopyright from './withCopyright'
+import Another from "./Another";
+ class App extends Component{
     render() {
         return(
-            <>
-                <CounterBtn type={"decrement"}>-</CounterBtn>
-                <Counter/>
-                <CounterBtn type={"increment"}>+</CounterBtn>
-            </>
+            <div>
+                App
+                <Another name={"component"}/>
+            </div>
         )
     }
 }
 
-export default App;
+export default App
