@@ -1,24 +1,14 @@
 
+
 import React,{Component} from 'react'
 import {render} from 'react-dom'
+import {CounterProvider} from './counterStore'
+import App from './App'
 
-class Counter extends
-
-
-
-class App extends Component{
-    render() {
-        return(
-            <>
-                <CountBtn type={"decrement"}/>
-                <Counter/>
-                <CountBtn type={"increment"}/>
-            </>
-        )
-    }
-}
 
 render(
-    <Counter/>,
+    <CounterProvider>
+    <App/>
+    </CounterProvider>,
     document.querySelector('#root')
 )
