@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <button onclick="dispatch({type: 'minus', n:2})">-</button>
+    <span id="countDisplay">10</span>
+    <button onclick="dispatch({type:'plus', n:2})">+</button>
+</div>
+<script type="text/javascript">
+    const countDisplay = document.querySelector('#countDisplay');
+    const countState = {
+        count:5
+    }
+    renderCount = (state) => {
+        countDisplay.innerHTML = state.count;
+    }
+    renderCount(countState);
+
+    // const minus = (n)=>{
+    //     countState.count -= n;
+    //     renderCount(countState);
+    // }
+    const changeState = (action) => {
+        switch(action.type){
+            case 'minus':
+                countState.count -= action.n;
+                break;
+            case 'plus':
+                countState.count += action.n;
+            default:
+                break;
+        }
+    }
+    const dispatch = (action) => {
+        changeState(action);
+        renderCount(countState);
+    }
+</script>
+</body>
+</html>

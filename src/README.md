@@ -1,27 +1,13 @@
-HOC : higher-order Component
+npm i redux -S
 
-@function is not applied in default react config
-
-we could use react-app-rewired to generate config file
-*   npm install react-app-rewired --save-dev
-*   change script in package.json 
-*   react-script    ===>   react-app-rewired start 
-*   add config-overrides.js file
-```
-module.exports = (config)=>{
-    //if not using customize-cra, config here
-    return config
-}
-```
-
-if want to config more convenient
-*   npm install customize-cra --save-dev
-*   npm i @babel/plugin-proposal-decorators -D
+import {combineReducers} from 'redux'
 
 
-```
-const{override, addDecoratorsLegacy} = require('customize-cra')
-module.exports = override(
-    addDecoratorsLegacy()
-)
-```
+
+1.  setup a reducer
+2.  setup store
+3. import store in index.js 
+4.  create actionTypes
+5. use store.dispatch(action)
+6.  subscribe in componentdidmount 
+
